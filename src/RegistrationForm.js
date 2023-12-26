@@ -69,85 +69,86 @@ const RegistrationForm = () => {
   };
   return (
     <div>
-      <section className="vh-100 bg-image" style={sectionStyle}>
-        <div className="mask d-flex align-items-center h-100 gradient-custom-3">
-          <div className="container h-100">
-            <div className="row d-flex justify-content-center align-items-center h-100">
-              <div className="col-12 col-md-9 col-lg-7 col-xl-6">
-                <div className="card" style={{ borderRadius: '15px' }}>
-                  <div className="card-body p-5">
-                    <h2 className="text-uppercase text-center mb-5">Registration Form</h2>
-             <form onSubmit={handleSubmit}>
-            <div className="form-outline mb-4">
-            <label className="form-label" htmlFor="form3Example1cg">
-              First Name:
-            </label>
-            <div>
-            <input
-                type="text"
-                name="firstName"
-                value={formData.firstName}
-                onChange={handleChange}
-                className={`form-control ${errors.firstName && 'is-invalid'}`}
-              />
-              <div  className="invalid-feedback">{errors.firstName}</div>
-            </div>              
-          </div>
-
-
-          <div className="form-outline mb-4">
-            <label className="form-label" htmlFor="form3Example1cg"></label>
-              Last Name:
-              <input
-                type="text"
-                name="lastName"
-                value={formData.lastName}
-                onChange={handleChange}
-                className={`form-control ${errors.lastName && 'is-invalid'}`}
-              />
-              <div className="invalid-feedback">{errors.lastName}</div>
-            
-          </div>
-
-          <div className="form-outline mb-4">
-            <label className="form-label" htmlFor="form3Example1cg"></label>
-              Email:
-              <input
-                type="text" id="form3Example1cg" 
-                value={formData.email}
-                onChange={handleChange}
-                className={`form-control  form-control-lg ${errors.email && 'is-invalid'}`}
-              />
-              <div className="invalid-feedback">{errors.email}</div>
-            
-          </div>
-          <div className="form-outline mb-4">
-            <label className="form-label" htmlFor="form3Example1cg"></label>
-              Password:
-              <input
-                type="password"
-                name="password"
-                value={formData.password}
-                onChange={handleChange}
-                className={`form-control ${errors.password && 'is-invalid'}`}
-              />
-              <div className="invalid-feedback">{errors.password}</div>
-           
-          </div>
-          <div className="text-center">
-            <button type="submit" className="btn btn-primary">
-              Register
-            </button>
-          </div>
-                    </form>
-                  </div>
+    <section className="vh-100 bg-image" style={sectionStyle}>
+      <div className="mask d-flex align-items-center h-100 gradient-custom-3">
+        <div className="container h-100">
+          <div className="row d-flex justify-content-center align-items-center h-100">
+            <div className="col-12 col-md-9 col-lg-7 col-xl-6">
+              <div className="card" style={{ borderRadius: '15px' }}>
+                <div className="card-body p-5">
+                  <h2 className="text-uppercase text-center mb-5">Registration Form</h2>
+                  <form onSubmit={handleSubmit}>
+                    <div className="form-outline mb-4">
+                      <label className="form-label" htmlFor="form3Example1cg">
+                        First Name:
+                      </label>
+                      <input
+                        type="text"
+                        name="firstName"
+                        value={formData.firstName}
+                        onChange={handleChange}
+                        className={`form-control ${errors.firstName && 'is-invalid'}`}
+                      />
+                      <div className="invalid-feedback">{errors.firstName}</div>
+                    </div>
+  
+                    <div className="form-outline mb-4">
+                      <label className="form-label" htmlFor="form3Example1cg">
+                        Last Name:
+                      </label>
+                      <input
+                        type="text"
+                        name="lastName"
+                        value={formData.lastName}
+                        onChange={handleChange}
+                        className={`form-control ${errors.lastName && 'is-invalid'}`}
+                      />
+                      <div className="invalid-feedback">{errors.lastName}</div>
+                    </div>
+  
+                    <div className="form-outline mb-4">
+                      <label className="form-label" htmlFor="form3Example1cg">
+                        Email:
+                      </label>
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className={`form-control ${errors.email && 'is-invalid'}`}
+                      />
+                      <div className="invalid-feedback">{errors.email}</div>
+                    </div>
+  
+                    <div className="form-outline mb-4">
+                      <label className="form-label" htmlFor="form3Example1cg">
+                        Password:
+                      </label>
+                      <input
+                        type="password"
+                        name="password"
+                        value={formData.password}
+                        onChange={handleChange}
+                        className={`form-control ${errors.password && 'is-invalid'}`}
+                      />
+                      <div className="invalid-feedback">{errors.password}</div>
+                    </div>
+  
+                    <div className="text-center">
+                      <button type="submit" className="btn btn-primary">
+                        Register
+                      </button>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
+  </div>
+  
   );
 };
 
